@@ -1,0 +1,50 @@
+/* this selects before and after elements so that
+the box-sizing inherited styling applies to 
+both before and after effects */
+*,
+*::after,
+*::before { 
+    margin: 0; 
+    padding: 0;
+
+    /* this line makes it so that each 
+    and every element will inherit the 
+    border-box setting from the body 
+    selector */
+    box-sizing: inherit;
+}
+
+html { 
+    /* Global font size is set at 62.5% because 
+    this overrides default browser size of 16px 
+    to 10px so that 10px = 1rem, 
+    making all adjustments very simple */
+    font-size: 62.5%; 
+
+    // this phone query is excluded because it is the same as tablet portrait
+    // @include respond(phone) { 
+    //     font-size: 50%; 
+    // }
+
+    @include respond(tab-land) { // width < 1200?
+        font-size: 56.25%; // 1 rem = 9px, 9/16 = 56.25%
+    }
+
+    @include respond(tab-port) { // width < 900?
+        font-size: 50%; // 1 rem = 8px, 8/16 = 50%
+    }
+
+    @include respond(big-desktop) { // width > 1800?
+        font-size: 75%; // 1 rem = 12px, 12/16 = 75%
+    }
+}
+
+/*  */
+body { 
+    box-sizing: border-box;
+}
+
+::selection {
+    background-color: $color-primary;
+    color: $color-white;
+}
