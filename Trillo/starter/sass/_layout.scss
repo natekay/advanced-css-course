@@ -1,0 +1,39 @@
+.container { 
+    // max-width is 1200px or 100% of the viewport if less is available
+    max-width: 120rem;
+
+    // centers the container within its parent element, which is the body
+    margin: 8rem auto;
+
+    background-color: var(--color-grey-light-2);
+    box-shadow: var(--shadow-dark);
+
+    min-height: 50rem;
+}
+
+.header { 
+    height: 7rem;
+    background-color: #fff;
+    border-bottom: var(--color-grey-light-2);
+}
+
+// flex container
+.content { 
+    display: flex;
+}
+
+// flex item
+.sidebar { 
+    background-color: var(--color-grey-dark-1);
+
+    // flex shorthand: grow - shrink - basis
+    flex: 0 0 18%;
+}
+
+// flex item
+.hotel-view { 
+    background-color: orangered;
+
+    // allows the element to grow as much as it can;
+    flex: 1;
+}
