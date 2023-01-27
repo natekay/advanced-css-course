@@ -33,12 +33,17 @@
 
     // flex shorthand: grow - shrink - basis
     flex: 0 0 18%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 // flex item
 .hotel-view { 
     background-color: orangered;
-
+    height: 80rem;
+    
     // allows the element to grow as much as it can;
     flex: 1;
 }
